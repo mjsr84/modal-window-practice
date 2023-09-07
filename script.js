@@ -8,16 +8,14 @@ const closeModal = function () {
     modal.classList.add('hidden');
     overlay.classList.add('hidden');
 }
-console.log(btnsOpenModal);
+const openModal = function () {
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+}
 
 // OPEN MODAL WINDOWS
 for (let i = 0; i < btnsOpenModal.length; i++)
-    btnsOpenModal[i].addEventListener
-        ('click', function () {
-            console.log('button clicked');
-            modal.classList.remove('hidden');
-            overlay.classList.remove('hidden');
-        });
+    btnsOpenModal[i].addEventListener('click', openModal);
 
 // CLOSE MODAL WINDOWS
 btnCloseModal.addEventListener('click', closeModal);
